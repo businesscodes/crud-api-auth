@@ -20,9 +20,6 @@ router.post('/user', createUser);
 //GET USER
 router.get('/user/:id', getUser);
 
-//DELETE USER
-router.delete('/user/:id', deleteUser);
-
 //UPDATE USER
 router.put('/user/:id', updateUser);
 
