@@ -27,18 +27,6 @@ export async function getUser(req: Request, res: Response) {
     }
 }
 
-export async function deleteUser(req: Request, res: Response) {
-    try {
-        const user = await User.findByIdAndRemove(req.params.id);
-        res.status(200).json(user)
-
-    } catch (error) {
-        res.status(402).json({
-            "error": error.message
-        })
-
-    }
-}
 
 export async function updateUser(req: Request, res: Response) {
     try {
