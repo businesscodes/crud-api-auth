@@ -27,20 +27,6 @@ export async function getUser(req: Request, res: Response) {
     }
 }
 
-
-export async function updateUser(req: Request, res: Response) {
-    try {
-        const user = await User.findByIdAndUpdate(req.params.id,req.body);
-        res.status(200).json(user)
-
-    } catch (error) {
-        res.status(402).json({
-            "error": error.message
-        })
-
-    }
-}
-
 export async function getAllUsers(req: Request, res: Response) {
     try {
         const user = await User.find();
@@ -54,3 +40,15 @@ export async function getAllUsers(req: Request, res: Response) {
     }
 }
 
+export async function updateUser(req: Request, res: Response) {
+    try {
+        const user = await User.findByIdAndUpdate(req.params.id,req.body);
+        res.status(200).json(user)
+
+    } catch (error) {
+        res.status(402).json({
+            "error": error.message
+        })
+
+    }
+}
