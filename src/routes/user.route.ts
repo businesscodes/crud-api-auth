@@ -16,7 +16,6 @@ const router = express.Router();
 //CREATE
 router.post('/user', createUser);
 
-
 //GET USER
 router.get('/user/:id', getUser);
 
@@ -25,5 +24,8 @@ router.put('/user/:id', updateUser);
 
 //GET ALL USERS
 router.get('/users/all', getAllUsers);
+
+//For Delete User
+router.delete('/user/:id', deleteUser);
 
 export default router;
